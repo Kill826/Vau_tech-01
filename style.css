@@ -1,0 +1,164 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Heading (Astro) */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* ================= FORMS (LOGIN, SIGNUP, CONTACT) ================= */
+/* Shared style for the centered cards */
+#signupSection, #loginSection, .page {
+    background: #ffffff;
+    max-width: 450px;
+    margin: 0 auto 50px auto; /* Centered horizontally */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+}
+
+/* Make the inner pages (Home/Contact/Profile) slightly wider */
+.page {
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 16px 0;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allow user to resize height only */
+    min-height: 100px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    background-color: #4a90e2; /* Nice modern blue */
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Links (Login/Signup toggles) */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Status Messages (Success/Error text) */
+#signupMsg, #loginMsg, #contactMsg {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* ================= NAVIGATION BAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center;
+    background-color: #2c3e50; /* Dark distinctive header */
+    color: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px; /* Spacing between menu items */
+}
+
+.navbar ul li {
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar ul li:hover {
+    color: #4a90e2; /* Highlight color on hover */
+}
+
+/* ================= CONTACT PAGE SPECIFICS ================= */
+.contact-info {
+    text-align: left;
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #4a90e2;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+}
+
+/* ================= UTILITY ================= */
+/* Hide BR tags in forms to prevent double spacing since inputs are block-like now */
+form br {
+    display: none;
+}
